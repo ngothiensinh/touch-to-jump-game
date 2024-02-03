@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy to Azure
       run: |
-        curl -X POST -u ${{ secrets.deployUsername }}:${{ secrets.deployPassword }} --data-binary @webapp.zip https://lacxi.scm.azurewebsites.net/api/zipdeploy     
+        curl -o /dev/null -w "%{http_code}" -X POST -u ${{ secrets.deployUsername }}:${{ secrets.deployPassword }} --data-binary @webapp.zip https://lacxi.scm.azurewebsites.net/api/zipdeploy     
