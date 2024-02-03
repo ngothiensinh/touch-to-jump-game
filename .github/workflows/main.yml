@@ -1,0 +1,23 @@
+name: Deploy to Azure
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Zip the web sources
+      run: |
+        zip -r webapp.zip index.html timing-data.js
+
+    - name: Deploy to Azure
+      run: |
+        curl --silent --output /dev/null -X POST -u ${{ secrets.deployUsername }}:${{ secrets.deployPassword }} --data-binary @"webapp.zip" https://lacxi.scm.azurewebsites.net/api/zipdeploy     
