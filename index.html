@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <style>
+        @supports (-webkit-touch-callout: none) {
+            .h-screen {
+                height: -webkit-fill-available;
+            }
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100dvh;
+            min-height: -webkit-fill-available;
+        }
+
+        html {
+            height: -webkit-fill-available;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gray-100 flex flex-col justify-between select-none">
+
+    <section>
+        <div class="py-6 flex flex-col justify-center sm:py-12 px-4 space-y-3">
+            <h1 class="text-3xl text-pink-600 font-semibold text-center py-3">Touch Timing</h1>
+
+            <!-- ROUND Navigation -->
+            <div class="flex justify-center mx-auto">
+                <div class="flex flex-row mx-auto">
+                    <button id="btn-prev-round" type="button"
+                        class="font-medium text-sm px-5 py-2.5 text-center me-2 text-pink-600">
+                        <div class="flex flex-row align-middle">
+                            <svg class="w-5 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="divRound" class="flex items-center justify-center font-semibold text-gray-600">
+                        Round 1
+                    </div>
+
+                    <button id="btn-next-round" type="button"
+                        class="font-medium text-sm px-5 py-2.5 text-center me-2 text-pink-600">
+                        <div class="flex flex-row align-middle">
+                            <svg class="w-5 ml-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP Navigation -->
+            <div class="flex justify-center mx-auto">
+                <div class="flex flex-row mx-auto">
+                    <button id="btn-prev-step" type="button"
+                        class="font-medium text-sm px-5 py-2.5 text-center me-2 text-pink-600">
+                        <div class="flex flex-row align-middle">
+                            <svg class="w-5 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="divStep" class="flex items-center justify-center font-semibold text-gray-600">
+                        Step 0
+                    </div>
+
+                    <button id="btn-next-step" type="button"
+                        class="font-medium text-sm px-5 py-2.5 text-center me-2 text-pink-600">
+                        <div class="flex flex-row align-middle">
+                            <svg class="w-5 ml-2" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress bar -->
+            <div
+                class="bg-white rounded-xl shadow-lg shadow-pink-400 overflow-hidden p-1 m-4 border-solid border-blue-500">
+                <div class="relative h-10 flex items-center justify-center">
+                    <div id="divTarget"
+                        class="absolute top-0 bottom-0 left-0 rounded-lg rounded-r-none bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br">
+                    </div>
+                    <div id="divCurrent"
+                        class="absolute top-0 bottom-0 left-0 rounded-lg bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br rounded-r-none">
+                    </div>
+                    <div id="divText" class="relative text-indigo-900 font-medium text-sm"></div>
+                </div>
+            </div>
+
+            <!-- Touch duration of current step -->
+            <form class="max-w-xs mx-auto pt-10">
+
+                <div class="relative flex items-center max-w-[11rem] shadow-lg shadow-pink-300  rounded-2xl">
+                    <button type="button" id="decrement-button" data-input-counter-decrement="input-step-time"
+                        class="bg-gray-100 text-pink-600 hover:bg-gray-200 rounded-s-lg p-3 h-11 focus:ring-gray-100 focus:ring-2 focus:outline-none">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 18 2">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h16" />
+                        </svg>
+                    </button>
+                    <input type="text" id="input-step-time" data-input-counter data-input-counter-min="1"
+                        data-input-counter-max="5" aria-describedby="helper-text-explanation"
+                        class="bg-gray-50 h-11 font-medium text-center text-pink-600 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full pb-6"
+                        placeholder="" value="3" required>
+                    <div
+                        class="absolute bottom-1 start-1/2 -translate-x-1/2 rtl:translate-x-1/2 flex items-center text-xs text-gray-400 space-x-1 rtl:space-x-reverse">
+                        <svg class="w-2.5 h-2.5 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9" />
+                        </svg>
+                        <span>Millisecond</span>
+                    </div>
+                    <button type="button" id="increment-button" data-input-counter-increment="input-step-time"
+                        class="bg-gray-100 text-pink-600 hover:bg-gray-200 rounded-e-lg p-3 h-11 focus:ring-gray-100 focus:ring-2 focus:outline-none">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 18 18">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 1v16M1 9h16" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">Touch
+                    duration</p>
+            </form>
+
+            <!-- visit counter -->
+            <div class="mx-auto mt-4 ">
+                <a href='http://www.freevisitorcounters.com'>www.freevisitorcounters</a>
+                <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=284ceb61b2a186ce3904f88710e72238c45f8a96'></script>
+                <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1136260/t/1"></script>
+                <p class="text-center text-sm text-gray-500 dark:text-gray-400">App visitor</p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="flex justify-center items-center flex-col">
+        <button id="my-btn" type="button"
+            class="rounded-full text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 shadow-lg shadow-pink-500/50 font-medium text-sm px-5 py-5 text-center me-2 mb-2">
+            Touch me!
+        </button>
+
+        <div class="pt-10 pb-2 text-sm text-gray-400">Copyright <a rel="noopener"
+                class="text-pink-600 underline hover:shadow-lg hover:shadow-pink-400"
+                href="https://facebook.com/ngothiensinh.tk" target="_blank">@sinhnt</a> 2024
+        </div>
+    </div>
+
+    <script src="./timing-data.js?v=2"></script>
+    <script>
+        if (getDeviceType() === "desktop") {
+            alert('This is a mobile app. Please use a mobile device to run this app: ' + window.location.href.replace('index.html', ''));
+        };
+
+        const maxTime = 2000;
+        let currentRound = 1;
+        let currentStep = 1;
+
+        initPage();
+
+        loadStep(currentRound, currentStep);
+
+        let btnNextRound = document.getElementById('btn-next-round');
+        btnNextRound.addEventListener('click', function () {
+            if (currentRound < rounds.length) {
+                currentRound++;
+                currentStep = 1;
+                document.getElementById('divRound').innerHTML = 'Round ' + currentRound;
+                loadStep(currentRound, currentStep);
+            }
+        });
+
+        let btnPrevRound = document.getElementById('btn-prev-round');
+        btnPrevRound.addEventListener('click', function () {
+            if (currentRound > 1) {
+                currentRound--;
+                currentStep = 1;
+                document.getElementById('divRound').innerHTML = 'Round ' + currentRound;
+                loadStep(currentRound, currentStep);
+            }
+        });
+
+        let btnNextStep = document.getElementById('btn-next-step');
+        btnNextStep.addEventListener('click', function () {
+            if (currentStep < rounds[currentRound - 1].length) {
+                currentStep++;
+                document.getElementById('divStep').innerHTML = 'Step ' + `${currentStep - 1}`;
+                loadStep(currentRound, currentStep);
+            }
+        });
+
+        let btnPrevStep = document.getElementById('btn-prev-step');
+        btnPrevStep.addEventListener('click', function () {
+            if (currentStep > 1) {
+                currentStep--;
+                document.getElementById('divStep').innerHTML = 'Step ' + `${currentStep - 1}`;
+                loadStep(currentRound, currentStep);
+            }
+        });
+
+        function initPage() {
+            let increateButton = document.getElementById('increment-button');
+            let decrementButton = document.getElementById('decrement-button');
+
+            const stepAmout = 50;
+            increateButton.addEventListener('click', function () {
+                let input = document.getElementById('input-step-time');
+                let value = parseInt(input.value);
+                if (value < maxTime) {
+                    value = value + stepAmout
+                    input.value = value;
+                    updateProgressBarTarget();
+                }
+            });
+
+            decrementButton.addEventListener('click', function () {
+                let input = document.getElementById('input-step-time');
+                let value = parseInt(input.value);
+                if (value > stepAmout) {
+                    value = value - stepAmout;
+                    input.value = value
+                    updateProgressBarTarget();
+                }
+            });
+        }
+
+        function loadStep(round, step) {
+            let divStep = document.getElementById('divStep');
+            divStep.innerHTML = 'Step ' + `${currentStep - 1}`;
+            let inputStepTime = document.getElementById('input-step-time');
+            inputStepTime.value = rounds[round - 1][step - 1];
+            updateProgressBarTarget();
+
+            let myButton = document.getElementById('my-btn');
+
+            let divText = document.getElementById('divText');
+            let divCurrent = document.getElementById('divCurrent');
+            divCurrent.style.width = '0%';
+
+            let updateTimer;
+
+            let touchStartTime, touchEndTime;
+
+            myButton.addEventListener('touchstart', function () {
+                touchStartTime = Date.now();
+
+                updateTimer = setInterval(function () {
+                    let touchDuration = (Date.now() - touchStartTime);
+
+                    divCurrent.style.width = (touchDuration / maxTime) * 100 + '%';
+
+                    divText.innerHTML = touchDuration + ' ms';
+
+                }, 10);
+            });
+
+            myButton.addEventListener('touchend', function () {
+                touchEndTime = Date.now();
+                clearInterval(updateTimer);
+            });
+        }
+
+        function updateProgressBarTarget() {
+            let divTarget = document.getElementById('divTarget');
+            let inputStepTime = document.getElementById('input-step-time');
+            divTarget.style.width = (inputStepTime.value / maxTime) * 100 + '%';
+        }
+
+        function getDeviceType() {
+            const ua = navigator.userAgent;
+            if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+                return "tablet";
+            }
+            if (
+                /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+                    ua
+                )
+            ) {
+                return "mobile";
+            }
+            return "desktop";
+        };
+    </script>
+
+</body>
+
+</html>
