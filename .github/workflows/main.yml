@@ -16,6 +16,8 @@ jobs:
 
     - name: Zip the web sources
       run: |
+        UUID=$(uuidgen)
+        sed -i "s|timing-data.js?v=.*\"|timing-data.js?v=$UUID\"|g" index.html
         zip -r webapp.zip index.html timing-data.js
 
     - name: Deploy to Azure
